@@ -354,6 +354,25 @@ font-family: 'Spectral', serif;
 #contact .container {
 	display: flex;
 }
+
+#contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Empêche l'image de rétrécir */
+#contact .picture.right {
+    flex: 0 0 374px;
+    width: 374px;
+    margin-left: 2rem;
+}
+
+#contact .picture.right img {
+    width: 100%;
+    display: block;
+}
+
 .picture.right::before {
 	content: ' ';
 	background-color: #BEB45A;
@@ -364,31 +383,39 @@ font-family: 'Spectral', serif;
 	right: 0;
 	z-index: -1;
 }
-.form-container {
-	flex : 2;
 
+.form-container {
+	flex: 1;
+	max-width: 520px;
 }
+
 form {
 	display: flex;
 	flex-direction: column;
-	width: 70%;
+	width: 100%;
+	max-width: 520px;
 	align-items: flex-start;
 }
 
-form input {
+form input,
+form textarea,
+input[type="submit"] {
 	width: 100%;
+	box-sizing: border-box;
+}
+
+form input {
 	background-color: transparent;
-	border: solid 1px;
+	border: solid 1px #000;
 	height: 2.5em;
 	margin-bottom: 20px;
 }
 
 form textarea {
-	width: 100%;
 	background-color: transparent;
-	border: solid 1px;
+	border: solid 1px #000;
 	height: 5em;
-	line-height: 2.5em;
+	line-height: 1.5;
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
@@ -397,6 +424,7 @@ input[type="submit"] {
 	background-color: #7A722E;
 	color: #fff;
 	padding: .5em 1em;
+	border: solid 1px #fff;
 }
 
 
@@ -469,12 +497,20 @@ input[type="submit"] {
 		z-index: 0;
 	}
 
-	#contact .container {
-		flex-direction: column;
-	}
-	#contact .picture.right {
-		margin-top: 1em;
-	}
+    #contact .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    #contact .picture.right {
+        width: 374px;
+        max-width: 85%;
+        margin-top: 2rem;
+        margin-left: 0;
+        flex: none;
+        align-self: flex-start; /* Aligne la photo à gauche */
+    }
+
 	.picture.right::before {
 		width: 100%;
 		height: 30%;
@@ -482,6 +518,17 @@ input[type="submit"] {
 		bottom: 0;
 		right: 0;
 		z-index: -1;
+	}
+
+	.form-container,
+	form {
+		width: 100%;
+		max-width: 520px;
+	}
+
+	#contact .container {
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }
 
