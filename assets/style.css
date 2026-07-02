@@ -75,14 +75,27 @@ textarea:focus-visible,
     background-color: black;
     border-radius: 50%;
     background-size: 18px 18px;
-	
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    
+
+/* ==============================
+   Carrousel
+================================= */
+
+#carouselExampleIndicators {
+    height: 700px;
 }
 
+#carouselExampleIndicators .carousel-item,
+#carouselExampleIndicators .carousel-item img {
+    height: 700px;
+}
+
+#carouselExampleIndicators .carousel-item img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 
 /* ==============================
@@ -504,4 +517,24 @@ input[type="submit"] {
 	.picture {
 		width: 80%;
 	}
+}
+
+/* ==============================
+   Carroussel responsive
+================================= */
+
+@media (max-width: 992px) {
+    #carouselExampleIndicators,
+    #carouselExampleIndicators .carousel-item,
+    #carouselExampleIndicators .carousel-item img {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    #carouselExampleIndicators,
+    #carouselExampleIndicators .carousel-item,
+    #carouselExampleIndicators .carousel-item img {
+        height: 350px;
+    }
 }
