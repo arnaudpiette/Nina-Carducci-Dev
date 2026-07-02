@@ -284,12 +284,12 @@ textarea:focus-visible,
 }
 
 .quote__text {
-	font-family: 'Spectral', serif;
-	font-style: italic;
-	font-weight: 300;
-	font-size: 20px;
-	line-height: 1.6;
-	margin-bottom: 1rem;
+font-family: 'Spectral', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
 .quote__author {
