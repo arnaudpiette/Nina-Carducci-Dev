@@ -65,6 +65,27 @@ textarea:focus-visible,
 
 
 /* ==============================
+   Flèches du carrousel
+================================= */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 48px;
+    height: 48px;
+    background-color: black;
+    border-radius: 50%;
+    background-size: 18px 18px;
+	
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    
+}
+
+
+
+/* ==============================
    Section À propos
 ================================= */
 
@@ -122,7 +143,7 @@ textarea:focus-visible,
 ================================= */
 
 #gallery {
-	/*	min-height: 100vh; */
+	min-height: 100vh;
 }
 
 .title{
@@ -132,10 +153,11 @@ textarea:focus-visible,
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
-	border-radius:0 ;
+	background-color: #7A722E;
+	border-radius: 0;
 }
 .nav-pills .nav-link {
 	color: #000
@@ -171,6 +193,66 @@ textarea:focus-visible,
 	font-size: 24px;
 	z-index: 2;
 	user-select: none;
+}
+
+
+/* ==============================
+   Lightbox
+================================= */
+
+#myAwesomeLightbox .modal-dialog {
+    max-width: 900px;
+    margin: auto;
+}
+
+#myAwesomeLightbox .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#myAwesomeLightbox .modal-body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 0;
+}
+
+#myAwesomeLightbox .lightboxImage {
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+}
+
+#myAwesomeLightbox .mg-prev,
+#myAwesomeLightbox .mg-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background: rgba(255,255,255,.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1000;
+	border: none;
+	color: #000;	
+}
+
+#myAwesomeLightbox .mg-prev {
+    left: 10px;
+}
+
+#myAwesomeLightbox .mg-next {
+    right: 10px;
 }
 
 
@@ -291,9 +373,11 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
+
 input[type="submit"] {
-	background-color: #BEB45A;
-	padding: .5em 1em
+	background-color: #7A722E;
+	color: #fff;
+	padding: .5em 1em;
 }
 
 

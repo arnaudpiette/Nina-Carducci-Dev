@@ -297,12 +297,12 @@
       gallery.append(`<div class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
       }" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
               <div class="modal-body">
                 ${
                   navigation
-                    ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                    ? '<button type="button" class="mg-prev" aria-label="Image précédente">&lt;</button>'
                     : '<span style="display:none;" />'
                 }
 
@@ -310,7 +310,7 @@
 
                 ${
                   navigation
-                    ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;">></div>'
+                    ? '<button type="button" class="mg-next" aria-label="Image suivante">&gt;</button>'
                     : '<span style="display:none;" />'
                 }
               </div>
