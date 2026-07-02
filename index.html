@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
+  
+<!-- données structurées (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nina Carducci",
+  "image": "https://nina-carducci.github.io/assets/images/nina.jpg",
+  "description": "Photographe professionnelle à Bordeaux",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "68 avenue Alsace-Lorraine",
+    "postalCode": "33200",
+    "addressLocality": "Bordeaux",
+    "addressCountry": "FR"
+  },
+  "telephone": "+33556677889",
+  "openingHours": "Mo-Fr 10:00-19:00"
+  "priceRange": "€€",
+  "sameAs": [
+    "https://www.instagram.com/ninacarducci.photo/?hl=fr"
+  ]
+}
+</script>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Nina Carducci - Photographe à Bordeaux</title>
   <meta name="description" content="Nina Carducci, photographe professionnelle à Bordeaux, vous accompagne pour vos portraits, mariages, concerts et shootings d’entreprise.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nina Carducci - Photographe à Bordeaux">
+  <meta property="og:description" content="Photographe professionnelle à Bordeaux spécialisée en portraits, mariages, concerts et shootings d’entreprise.">
+  <meta property="og:image" content="https://nina-carducci.github.io/assets/images/nina.jpg">
+  <meta property="og:url" content="https://nina-carducci.github.io/">
+  <meta property="og:type" content="website">
+
+  <!-- balises Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nina Carducci - Photographe">
+  <meta name="twitter:description" content="Photographe professionnelle à Bordeaux">
+  <meta name="twitter:image" content="./assets/images/nina.jpg">
+  
+  <!-- Google URL -->
+  <link rel="canonical" href="https://nina-carducci.github.io/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg">
+  
+  <!-- Précharger l'image LCP -->
+  <link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg">
 
   <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/style.css">
@@ -21,52 +66,57 @@
 </head>
 
 <body>
+
 <div class="top-header">
 	<h1 class="name">Nina Carducci</h1>
-	<div class="nav">   
+	<nav class="nav" aria-label="Navigation principale">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
 			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" rel="noopener noreferrer" aria-label="Voir le profil Instagram de Nina Carducci">
-  					<img src="assets/images/instagram.png" width="40" height="40" alt="Instagram"></a></li>
+  					<img src="assets/images/instagram.png" alt="Instagram"></a></li>
 		</ul>
-	</div>
+	</nav>
 </div>
+
+
+
+<main>
 
 <div id="header">
 
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
 		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Photo 1"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Photo 2"></button>
+			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Photo 3"></button>
 		</div>
 
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" width="2000" height="925" alt="Portrait d'une personne dans un paysage">
+			<img fetchpriority="high" decoding="async" src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" width="2000" height="925"  alt="Portrait d'une personne dans un paysage">
+		</div>
+
+			<div class="carousel-item">
+				<img loading="lazy" decoding="async"src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100" alt="Paysage naturel">
 			</div>
 
 			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100" width="2000" height="925" alt="Paysage naturel">
-			</div>
-
-			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" width="2000" height="924" alt="Portrait d'une personne">
+				<img loading="lazy" decoding="async" src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" alt="Portrait d'une personne">
 			</div>
 		</div>
 
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
+			<span class="visually-hidden">Image précédente</span>
 		</button>
 
 		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
+			<span class="visually-hidden">Image suivante</span>
 		</button>
 
 	</div>
@@ -74,37 +124,37 @@
 
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina.jpg" width="1000" height="997" alt="Portrait de Nina Carducci, photographe professionnelle">
+		<img loading="lazy" decoding="async" src="./assets/images/nina.jpg" alt="Portrait de Nina Carducci, photographe professionnelle">
 	</div>
 
 	<div id="about-me">
-		<h3 class="about-me__title">A propos de moi</h3>
-		<h6 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h6>
+		<h2 class="about-me__title">A propos de moi</h2>
+		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
 </div>
 
 <div id="gallery">
-	<h3 class="title">Portfolio</h3>
+	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" width="900" height="1200" alt="Concert en live"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" width="900" height="1350" alt="Photo d'une réunion d'entreprise"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" width="900" height="609" alt="Photo d'un employé dans un bureau"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" width="900" height="720" alt="Couple en train de danser"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" width="700" height="1049" alt="Portrait d'une personne"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" width="900" height="1350" alt="Cérémonie de mariage"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" width="700" height="1052" alt="Portrait d'une personne"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" width="901" height="601" alt="Concert en live"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" width="900" height="551" alt="Photo d'une réunion d'entreprise"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Concert en live"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photo d'une réunion d'entreprise"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'un employé dans un bureau"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Couple en train de danser"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Portrait d'une personne"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Cérémonie de mariage"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Portrait d'une femme"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Concert en live"/>
+			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'une réunion d'entreprise"/>
 		</div>
 	</div>
 
 	<div class="quote">
 		<figure>
 			<blockquote>
-				<h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
+				<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
@@ -112,7 +162,7 @@
 </div>
 
 <div id="services">
-	<h3 class="title">Mes services</h3>
+	<h2 class="title">Mes services</h2>
 	<div class="container">
 		<div class="service">
 
@@ -160,7 +210,7 @@
 <div class="quote">
 	<figure>
 		<blockquote>
-			<h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
+			<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
@@ -182,16 +232,17 @@
 
 				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
-				
+
 				<input type="submit" value="Envoyer"/>
 			</form>
 		</div>
 
 		<div class="picture right">
-			<img src="./assets/images/camera.jpg" width="1000" height="998" alt="Appareil photo professionnel">
+			<img loading="lazy" decoding="async" src="./assets/images/camera.jpg" alt="Appareil photo professionnel">
 		</div>
 	</div>
 </div>
 
+</main>
 </body>
 </html>

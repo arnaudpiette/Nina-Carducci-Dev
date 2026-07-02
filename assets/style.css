@@ -270,24 +270,30 @@ textarea:focus-visible,
 
 
 /* ==============================
-   Citation
+   Citations
 ================================= */
 
 .quote {
-	font-family: 'Spectral';
-	font-style: italic;
 	width: 70%;
-	margin: auto;
+	margin: 0 auto;
 	padding-block: 3em;
 }
+
+.quote blockquote {
+	margin: 0;
+}
+
 .quote__text {
-	font-family: Spectral;
+	font-family: 'Spectral', serif;
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 20px;
+	line-height: 1.6;
+	margin-bottom: 1rem;
 }
+
 .quote__author {
-	font-family: Spectral;
+	font-family: 'Spectral', serif;
 	font-weight: 800;
 	font-size: 22px;
 }
