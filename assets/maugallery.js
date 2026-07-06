@@ -115,6 +115,24 @@
       .on("click.mauGallery", ".mg-next", () =>
         $.fn.mauGallery.methods.nextImage(options.lightboxId)
       );
+
+    // Ferme la lightbox au clic autour de l'image sur tablette et desktop.
+    $(lightboxSelector)
+      .off("click.mauGallery", ".modal-body")
+      .on("click.mauGallery", ".modal-body", function(event) {
+        const clickedAroundImage =
+          event.target === this || event.target.classList.contains("lightbox-stage");
+
+        if (window.matchMedia("(min-width: 769px)").matches && clickedAroundImage) {
+          const lightbox = document.getElementById(options.lightboxId);
+
+          if (window.bootstrap && bootstrap.Modal) {
+            bootstrap.Modal.getOrCreateInstance(lightbox).hide();
+          } else if ($(lightbox).modal) {
+            $(lightbox).modal("hide");
+          }
+        }
+      });
   };
 
   // =====================================================
@@ -194,6 +212,10 @@
       $(lightbox)
         .find(".lightboxImage")
         .attr("src", element.attr("src"));
+
+      $(lightbox)
+        .find(".mg-close")
+        .prop("hidden", window.matchMedia("(min-width: 769px)").matches);
 
       if (window.bootstrap && bootstrap.Modal) {
         bootstrap.Modal.getOrCreateInstance(lightbox).show();
@@ -300,19 +322,22 @@
           <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                ${
-                  navigation
-                    ? '<button type="button" class="mg-prev" aria-label="Image précédente">&lt;</button>'
-                    : '<span style="display:none;" />'
-                }
+                <button type="button" class="mg-close" data-bs-dismiss="modal" aria-label="Fermer la galerie">&times;</button>
+                <div class="lightbox-stage">
+                  ${
+                    navigation
+                      ? '<button type="button" class="mg-prev" aria-label="Image précédente">&lt;</button>'
+                      : '<span style="display:none;" />'
+                  }
 
-                <img class="lightboxImage img-fluid" alt="Image affichée dans la galerie agrandie"/>
+                  <img class="lightboxImage img-fluid" alt="Image affichée dans la galerie agrandie"/>
 
-                ${
-                  navigation
-                    ? '<button type="button" class="mg-next" aria-label="Image suivante">&gt;</button>'
-                    : '<span style="display:none;" />'
-                }
+                  ${
+                    navigation
+                      ? '<button type="button" class="mg-next" aria-label="Image suivante">&gt;</button>'
+                      : '<span style="display:none;" />'
+                  }
+                </div>
               </div>
             </div>
           </div>

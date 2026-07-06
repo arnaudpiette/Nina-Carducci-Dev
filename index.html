@@ -50,7 +50,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg">
   
   <!-- Précharger l'image LCP -->
   <link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg">
@@ -68,8 +67,13 @@
 <body>
 
 <div class="top-header">
-	<h1 class="name">Nina Carducci</h1>
-	<nav class="nav" aria-label="Navigation principale">   
+	<h1 class="name"><a href="./index.html">Nina Carducci</a></h1>
+	<button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-navigation">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<nav class="nav" id="main-navigation" aria-label="Navigation principale">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
@@ -97,7 +101,7 @@
 
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-			<img fetchpriority="high" decoding="async" src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" width="2000" height="925"  alt="Portrait d'une personne dans [...]
+			<img fetchpriority="high" decoding="async" src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" width="2000" height="925" alt="Portrait d'une personne dans un paysage">
 		</div>
 
 			<div class="carousel-item">
@@ -129,9 +133,9 @@
 
 	<div id="about-me">
 		<h2 class="about-me__title">A propos de moi</h2>
-		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j'y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière [...]
-		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n'avons qu'une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont i[...]
-			C'est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l'amour[...]
+		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j'y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
+		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n'avons qu'une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
+			C'est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l'amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
 </div>
 
@@ -140,21 +144,21 @@
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
 			<img loading="lazy" decoding="async" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Concert en live">
-			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photo d'une réun[...]
-			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'un employ[...]
-			<img loading="lazy" decoding="async" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Couple en train de danse[...]
+			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photo d'une réunion d'entreprise">
+			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'un employé dans un bureau">
+			<img loading="lazy" decoding="async" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Couple en train de danser">
 			<img loading="lazy" decoding="async" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Portrait d'une personne">
 			<img loading="lazy" decoding="async" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Cérémonie de mariage">
-			<img loading="lazy" decoding="async" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Portrait d'une [...]
+			<img loading="lazy" decoding="async" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Portrait d'une femme">
 			<img loading="lazy" decoding="async" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Concert en live">
-			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'une[...]
+			<img loading="lazy" decoding="async" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'une réunion d'entreprise">
 		</div>
 	</div>
 
 	<div class="quote">
 		<figure>
 			<blockquote>
-				<p class="quote__text">Un portrait n'est pas une ressemblance. Dès lors qu'une émotion ou qu'un fait est traduit en photo, il cesse d'être un fait pour devenir une opinion. L'ine[...]
+				<p class="quote__text">Un portrait n'est pas une ressemblance. Dès lors qu'une émotion ou qu'un fait est traduit en photo, il cesse d'être un fait pour devenir une opinion. L'inexactitude n'existe pas en photographie. Toutes les photos sont exactes. Aucune d'elles n'est la vérité.</p>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
