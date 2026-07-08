@@ -324,19 +324,21 @@
               <div class="modal-body">
                 <button type="button" class="mg-close" data-bs-dismiss="modal" aria-label="Fermer la galerie">&times;</button>
                 <div class="lightbox-stage">
-                  ${
-                    navigation
-                      ? '<button type="button" class="mg-prev" aria-label="Image précédente">&lt;</button>'
-                      : '<span style="display:none;" />'
-                  }
+                  <div class="lightbox-frame">
+                    ${
+                      navigation
+                        ? '<button type="button" class="mg-prev" aria-label="Image précédente">&lt;</button>'
+                        : '<span style="display:none;" />'
+                    }
 
-                  <img class="lightboxImage img-fluid" alt="Image affichée dans la galerie agrandie"/>
+                    <img class="lightboxImage img-fluid" alt="Image affichée dans la galerie agrandie"/>
 
-                  ${
-                    navigation
-                      ? '<button type="button" class="mg-next" aria-label="Image suivante">&gt;</button>'
-                      : '<span style="display:none;" />'
-                  }
+                    ${
+                      navigation
+                        ? '<button type="button" class="mg-next" aria-label="Image suivante">&gt;</button>'
+                        : '<span style="display:none;" />'
+                    }
+                  </div>
                 </div>
               </div>
             </div>
